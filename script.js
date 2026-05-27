@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tags: ["Word", "Excel", "HTML", "CSS", "JavaScript", "Back-end"],
     social: {
       instagram: "https://www.instagram.com/fraaex_?igsh=MXFkYzZwOXUzMm1h",
-      github: "https://github.com/fraa0912"
+      github: "https://github.com/deufraa"
     }
   };
 
