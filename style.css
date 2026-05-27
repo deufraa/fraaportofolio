@@ -1,11 +1,10 @@
 :root {
-  /* Palet elegan: biru gelap + emas lembut */
-  --bg: #0f172a;          /* navy gelap */
+  --bg: #0f172a;          
   --bg-soft: #111827;
   --card: #0b1220;
   --card-soft: #020617;
-  --primary: #38bdf8;     /* biru cerah */
-  --accent: #fbbf24;      /* emas lembut */
+  --primary: #38bdf8;    
+  --accent: #fbbf24;      
   --accent-soft: #facc6b;
   --border-soft: #1e293b;
   --text-main: #e5e7eb;
@@ -36,7 +35,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* CONTAINER UTAMA (Grid 2 Kolom) */
 .container {
   width: 100%;
   max-width: 1120px;
@@ -68,9 +66,7 @@ body {
   z-index: 1;
 }
 
-/* ==========================================================================
-   SIDEBAR PROFIL (KIRI) - Sudah Dirapikan & Tidak Memanjang Kosong
-   ========================================================================== */
+
 .profile {
   background: linear-gradient(160deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.98));
   border-radius: 18px;
@@ -84,7 +80,6 @@ body {
   backdrop-filter: blur(20px);
   animation: sectionIn 0.8s ease-out forwards;
   
-  /* KUNCI UTAMA: Agar tinggi card profil pas dengan konten & tidak melar ke bawah */
   height: fit-content; 
   align-self: start; 
 }
@@ -196,7 +191,6 @@ body {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.5);
 }
 
-/* TOMBOL DOWNLOAD CV */
 .btn-download {
   width: 100%;
   text-decoration: none;
@@ -225,9 +219,7 @@ body {
   box-shadow: 0 14px 28px rgba(249, 115, 22, 0.4);
 }
 
-/* ==========================================================================
-   NAVIGASI TABS (MENU ATAS HALAMAN BARU)
-   ========================================================================== */
+
 .main-nav {
   display: flex;
   gap: 8px;
@@ -257,9 +249,6 @@ body {
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
 }
 
-/* ==========================================================================
-   KONTEN KANAN & SISTEM HALAMAN
-   ========================================================================== */
 .content {
   display: flex;
   flex-direction: column;
@@ -282,7 +271,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* HERO TEXT – EFEK KETIK */
 .hero-typing {
   background: radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.95));
   border-radius: 18px;
@@ -371,7 +359,6 @@ body {
   line-height: 1.6;
 }
 
-/* PROJECTS GRID */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -402,7 +389,6 @@ body {
   color: #e5e7eb;
 }
 
-/* STRENGTHS / PROGRES BAR */
 .strengths {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -484,7 +470,6 @@ body {
   transition: width 0.9s ease-out;
 }
 
-/* BADGE / PILL STATUS */
 .pill {
   display: inline-flex;
   align-items: center;
