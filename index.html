@@ -1,160 +1,278 @@
-document.addEventListener("DOMContentLoaded", () => {
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Daniel Eufratama Siahaan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    
+    <aside class="profile">
+      <div class="avatar">
+        <img src="KOMTING.jpg" alt="Foto Daniel Eufratama Siahaan" class="avatar-img">
+      </div>
+      <div class="profile-text">
+        <h1 id="profile-name">Daniel Eufratama Siahaan</h1>
+        <h2 id="profile-role">Data Analyst & Web Developer</h2>
+        <p id="profile-bio">
+          Mahasiswa Informatika yang suka eksplor data dan membangun tampilan web
+          yang soft, minimalis, dan nyaman dilihat.
+        </p>
+        <small id="profile-location">📍 Medan, Indonesia</small>
+        
+        <div class="tags" id="profile-tags">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Excel</span>
+        </div>
+        
+        <div class="social" id="profile-social">
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
 
-  const navLinks = document.querySelectorAll(".nav-link");
-  const tabContents = document.querySelectorAll(".tab-content");
+        <a class="btn-download" href="CV Fratama.pdf" download>
+          <button type="button">Download CV</button>
+        </a>
+      </div>
+    </aside>
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      const targetTab = link.getAttribute("data-target");
+    <main class="content">
+      
+      <nav class="main-nav">
+        <button class="nav-link active" data-target="home">Beranda</button>
+        <button class="nav-link" data-target="experience">Pengalaman</button>
+        <button class="nav-link" data-target="projects">Project</button>
+        <button class="nav-link" data-target="contact">Kontak</button>
+      </nav>
 
-      // Reset kelas active di menu navigasi
-      navLinks.forEach((nav) => nav.classList.remove("active"));
-      link.classList.add("active");
+      <div id="home" class="tab-content active">
+        <div class="hero-typing">
+          <span class="hero-prefix">Hi👋, saya</span>
+          <span class="hero-name">Daniel Eufratama Siahaan</span>
+          <div class="hero-typing-row">
+            <span class="hero-static">yang sangat tertarik sebagai</span>
+            <span class="typeText"></span>
+          </div>
+        </div>
 
-      // Sembunyikan semua halaman, tampilkan yang dipilih
-      tabContents.forEach((content) => {
-        content.classList.remove("active");
-        if (content.id === targetTab) {
-          content.classList.add("active");
-        }
-      });
-    });
-  });
+        <section class="section">
+          <h3>Tentang Saya</h3>
+          <p>
+            Saya adalah mahasiswa aktif Informatika di Universitas Satya Terra Bhinneka
+            yang senang mencoba hal-hal baru, khususnya seputar analisis data dan
+            pengembangan web, serta memperbanyak pengalaman dan relasi di luar kampus non akademik.
+          </p>
+          <div class="btn-row">
+            <button class="btn-soft active" id="btn-profile-1">Profil Utama</button>
+            <button class="btn-soft" id="btn-profile-2">Profil Alternatif</button>
+          </div>
+        </section>
 
-  const profile1 = {
-    name: "Daniel Eufratama Siahaan",
-    role: "Data Analyst & Web Developer",
-    bio: "Mahasiswa Informatika yang suka eksplor data dan membangun tampilan web yang soft dan nyaman dilihat.",
-    location: "📍 Medan, Indonesia",
-    tags: ["Word", "Excel", "HTML", "CSS", "JavaScript", "Back-end"],
-    social: {
-      instagram: "https://www.instagram.com/fraaex_?igsh=MXFkYzZwOXUzMm1h",
-      github: "https://github.com/deufraa"
-    }
-  };
+        <section class="section">
+          <h3>Kelebihan Saya</h3>
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Soft skill & hard skill yang paling menonjol
+          </div>
+          <div class="strengths">
+            <div class="strength-card" data-level="90">
+              <div class="strength-label">
+                <span class="strength-dot"></span>
+                <span>Detail Oriented</span>
+              </div>
+              <p class="strength-desc">Rapi dalam layout, spacing, dan pemilihan warna sehingga interface terasa halus.</p>
+              <div class="strength-level"><div class="strength-fill"></div></div>
+            </div>
+            
+            <div class="strength-card" data-level="95">
+              <div class="strength-label">
+                <span class="strength-dot"></span>
+                <span>Public Speaking</span>
+              </div>
+              <p class="strength-desc">Mampu menjelaskan ide teknis ke orang non-teknis dengan bahasa yang sederhana.</p>
+              <div class="strength-level"><div class="strength-fill"></div></div>
+            </div>
+            
+            <div class="strength-card" data-level="90">
+              <div class="strength-label">
+                <span class="strength-dot"></span>
+                <span>Problem Solving</span>
+              </div>
+              <p class="strength-desc">Terbiasa memecah masalah besar menjadi task kecil yang terukur dan bisa dieksekusi.</p>
+              <div class="strength-level"><div class="strength-fill"></div></div>
+            </div>
+            
+            <div class="strength-card" data-level="100">
+              <div class="strength-label">
+                <span class="strength-dot"></span>
+                <span>Kerja Tim</span>
+              </div>
+              <p class="strength-desc">Nyaman berkolaborasi dengan berbagai peran baik secara remote maupun onsite.</p>
+              <div class="strength-level"><div class="strength-fill"></div></div>
+            </div>
+          </div>
+        </section>
+      </div>
 
-  const profile2 = {
-    name: "Daniel E. Siahaan",
-    role: "Front-end & UI Enthusiast",
-    bio: "Fokus pada tampilan web yang rapi, konsisten, dan user-friendly dengan nuansa warna elegan.",
-    location: "📍 Indonesia",
-    tags: ["Front-end", "UI Design", "Responsive Layout"],
-    social: {
-      instagram: "#",
-      github: "#"
-    }
-  };
+      <div id="experience" class="tab-content">
+        <div class="experience-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px;">
+          
+          <section class="section">
+            <h3>Jenjang Pendidikan</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2024 - Sekarang</div>
+                <div class="timeline-title">S1 Teknik Informatika</div>
+                <div class="timeline-place">Universitas Satya Terra Bhinneka</div>
+                <div class="timeline-desc">Fokus di pengembangan web, UI/UX, dan pemrograman berbasis objek.</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2021 - 2024</div>
+                <div class="timeline-title">SMA</div>
+                <div class="timeline-place">SMA Negeri 5 Medan</div>
+              </div>
+            </div>
 
-  const profileName = document.getElementById("profile-name");
-  const profileRole = document.getElementById("profile-role");
-  const profileBio = document.getElementById("profile-bio");
-  const profileLocation = document.getElementById("profile-location");
-  const profileTags = document.getElementById("profile-tags");
-  const profileSocial = document.getElementById("profile-social");
-  const btn1 = document.getElementById("btn-profile-1");
-  const btn2 = document.getElementById("btn-profile-2");
+            <h3 style="margin-top: 2rem;">Sertifikasi & Prestasi</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2024</div>
+                <div class="timeline-title">Microsoft Office Specialist (MOS)</div>
+                <div class="timeline-desc">Sertifikasi internasional untuk Word, Excel, dan PowerPoint.</div>
+              </div>
+            </div>
+          </section>
 
-  function renderProfile(data) {
-    if (!profileName) return; // Guard clause agar aman jika elemen belum ke-render
-    profileName.textContent = data.name;
-    profileRole.textContent = data.role;
-    profileBio.textContent = data.bio;
-    profileLocation.textContent = data.location;
+          <section class="section">
+            <h3>Organisasi & Jabatan</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2025 - Sekarang</div>
+                <div class="timeline-title">Ketua Umum Himpunan Mahasiswa Informatika</div>
+                <div class="timeline-place">Universitas Satya Terra Bhinneka</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2025 - Sekarang</div>
+                <div class="timeline-title">Ketua UPM Vocal – Divisi KOMINFO</div>
+                <div class="timeline-place">Unit Prestasi Mahasiswa Vocal</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2024 - Sekarang</div>
+                <div class="timeline-title">Anggota Relawan Kota Medan</div>
+                <div class="timeline-place">IEA Medan (Ambulance Escorting)</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">28 Des 2025 - 3 Mei 2026</div>
+                <div class="timeline-title">Barista</div>
+                <div class="timeline-place">Lalu Street</div>
+                <div class="timeline-desc">Meracik kopi dan menu minuman, mengatur operasional bar, serta melayani pelanggan dengan ramah.</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">Maret 2026 - Sekarang</div>
+                <div class="timeline-title">Wakil Sekretaris</div>
+                <div class="timeline-place">Team Reaksi Cepat (TRC) Mitra Polrestabes Medan</div>
+                <div class="timeline-desc">Mengelola administrasi organisasi, pencatatan surat, dan mendukung koordinasi tim reaksi cepat di wilayah Medan.</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2023 - 2024</div>
+                <div class="timeline-title">Ketua Pemuda Olahraga PORA</div>
+                <div class="timeline-place">Organisasi Siswa Intra Sekolah (OSIS)</div>
+                <div class="timeline-desc">Mengatur jalannya acara sekolah, koordinasi dengan guru olahraga dan fasilitas, serta menjadi jembatan untuk ide kegiatan non-akademik.</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2021 - 2024</div>
+                <div class="timeline-title">Anggota KARATE</div>
+                <div class="timeline-place">Ekskul Karate</div>
+                <div class="timeline-desc">Aktif mengikuti kegiatan beladiri yang berkaitan dengan kedisiplinan dan pengembangan diri.</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-year">2018 - 2019</div>
+                <div class="timeline-title">Anggota Ekskul Dokter Remaja</div>
+                <div class="timeline-place">Ekstrakurikuler Dokter Remaja SMP</div>
+                <div class="timeline-desc">Berkontribusi aktif dalam pelayanan kesehatan siswa serta penjagaan upacara dan ruang UKS.</div>
+              </div>
+            </div>
+          </section>
 
-    // Render Tags
-    profileTags.innerHTML = "";
-    data.tags.forEach((t) => {
-      const span = document.createElement("span");
-      span.className = "tag";
-      span.textContent = t;
-      profileTags.appendChild(span);
-    });
+        </div>
+      </div>
 
-    // Render Social Media
-    profileSocial.innerHTML = "";
-    const ig = document.createElement("a");
-    ig.href = data.social.instagram;
-    ig.target = "_blank";
-    ig.textContent = "Instagram";
+      <div id="projects" class="tab-content">
+        <section class="section">
+          <h3>Project Pilihan</h3>
+          <p style="margin-bottom: 1.5rem;">Beberapa aplikasi dan sistem yang telah saya kembangkan:</p>
+          <div class="projects">
+            
+            <article class="project-card">
+              <div class="pill" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); margin-bottom: 8px;">Web Dev</div>
+              <h4>Landing Page Soft UI</h4>
+              <p>Desain clean dengan warna elegan dan layout responsif yang modern.</p>
+            </article>
 
-    const gh = document.createElement("a");
-    gh.href = data.social.github;
-    gh.target = "_blank";
-    gh.textContent = "GitHub";
+            <article class="project-card">
+              <div class="pill" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); margin-bottom: 8px;">UI/UX</div>
+              <h4>Mini Portfolio</h4>
+              <p>Portfolio satu halaman dengan animasi halus, simpel, dan interaktif.</p>
+            </article>
 
-    profileSocial.appendChild(ig);
-    profileSocial.appendChild(gh);
-  }
+            <article class="project-card">
+              <div class="pill" style="background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); margin-bottom: 8px;">Data</div>
+              <h4>Dashboard Data Sederhana</h4>
+              <p>Visualisasi data basic menggunakan chart dan tabel untuk analisis interaktif.</p>
+            </article>
 
-  // Set default profil utama saat awal load
-  renderProfile(profile1);
+          </div>
+        </section>
+      </div>
 
-  if (btn1 && btn2) {
-    btn1.addEventListener("click", () => {
-      btn1.classList.add("active");
-      btn2.classList.remove("active");
-      renderProfile(profile1);
-    });
+      <div id="contact" class="tab-content">
+        <section class="section contact-section">
+          <h3>Mari Berkolaborasi!</h3>
+          <p>
+            Ingin kolaborasi atau butuh bantuan ngerjain tampilan web / analisis data? 
+            Jangan ragu untuk menghubungi saya melalui kontak di bawah ini.
+          </p>
+          
+          <div class="contact-card-box">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <div>
+                <h5>Email Resmi</h5>
+                <p>maranatha.dwi@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📱</span>
+              <div>
+                <h5>Instagram / WhatsApp</h5>
+                <p>@fraaex_ / Hubungi via DM</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
-    btn2.addEventListener("click", () => {
-      btn2.classList.add("active");
-      btn1.classList.remove("active");
-      renderProfile(profile2);
-    });
-  }
+    </main>
+  </div>
 
-  const typeTarget = document.querySelector(".typeText");
-  const typingPhrases = [
-    "Data Analyst",
-    "Web Developer",
-    "Back-End",
-    "Cyber Security"
-  ];
-
-  let tpIndex = 0;
-  let charIndex = 0;
-  let isAdding = true;
-
-  function playTyping() {
-    if (!typeTarget) return;
-    const current = typingPhrases[tpIndex];
-
-    if (isAdding) {
-      typeTarget.textContent = current.slice(0, charIndex + 1);
-      charIndex++;
-
-      if (charIndex === current.length) {
-        isAdding = false;
-        setTimeout(playTyping, 1500);
-        return;
-      }
-    } else {
-      typeTarget.textContent = current.slice(0, charIndex - 1);
-      charIndex--;
-
-      if (charIndex === 0) {
-        isAdding = true;
-        tpIndex = (tpIndex + 1) % typingPhrases.length;
-      }
-    }
-
-    const speed = isAdding ? 90 : 60;
-    setTimeout(playTyping, speed);
-  }
-
-  if (typeTarget) {
-    playTyping();
-  }
-
-
-  const strengthCards = document.querySelectorAll(".strength-card");
-  strengthCards.forEach(card => {
-    const level = card.getAttribute("data-level");
-    const fill = card.querySelector(".strength-fill");
-    if (fill) {
-      setTimeout(() => {
-        fill.style.width = level + "%";
-      }, 300);
-    }
-  });
-});
+  <script src="script.js"></script>
+</body>
+</html>
