@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ============================================
-  //  LOGIKA UTAMA: NAVIGASI TAB (HALAMAN BARU)
-  // ============================================
+  
   const navLinks = document.querySelectorAll(".nav-link");
   const tabContents = document.querySelectorAll(".tab-content");
 
@@ -9,11 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => {
       const targetTab = link.getAttribute("data-target");
 
-      // Reset kelas active di menu navigasi
       navLinks.forEach((nav) => nav.classList.remove("active"));
       link.classList.add("active");
 
-      // Sembunyikan semua halaman, tampilkan yang dipilih
       tabContents.forEach((content) => {
         content.classList.remove("active");
         if (content.id === targetTab) {
@@ -23,9 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ============================================
-  //  DATA & SCRIPT GANTI PROFIL (BAWAAN)
-  // ============================================
   const profile1 = {
     name: "Daniel Eufratama Siahaan",
     role: "Data Analyst & Web Developer",
@@ -66,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     profileBio.textContent = data.bio;
     profileLocation.textContent = data.location;
 
-    // Render Tags
     profileTags.innerHTML = "";
     data.tags.forEach((t) => {
       const span = document.createElement("span");
@@ -75,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
       profileTags.appendChild(span);
     });
 
-    // Render Social Media
     profileSocial.innerHTML = "";
     const ig = document.createElement("a");
     ig.href = data.social.instagram;
@@ -91,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     profileSocial.appendChild(gh);
   }
 
-  // Set default profil utama saat awal load
+
   renderProfile(profile1);
 
   if (btn1 && btn2) {
@@ -108,9 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ============================================
-  //  EFEK KETIK – HAPUS TEKS (BAWAAN)
-  // ============================================
   const typeTarget = document.querySelector(".typeText");
   const typingPhrases = [
     "Data Analyst",
@@ -154,9 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     playTyping();
   }
 
-  // ============================================
-  //  ANIMASI BAR KELEBIHAN (BAWAAN)
-  // ============================================
+
   const strengthCards = document.querySelectorAll(".strength-card");
   strengthCards.forEach(card => {
     const level = card.getAttribute("data-level");
